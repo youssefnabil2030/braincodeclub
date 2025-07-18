@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Code Club - Empowering the Next Generation of Tech Entrepreneurs</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #06b6d4;
+            --dark-bg: #0f172a;
+            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #5855eb, #7c3aed);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .blockchain-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .coin-icon {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="#">
+                <i class="fas fa-brain text-primary me-2"></i>Brain Code Club
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#signup">Join Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white section-padding blockchain-bg" style="margin-top: 76px;">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">
+                            <i class="fas fa-coins me-1"></i>Earn EAT Coins While Learning
+                        </span>
+                    </div>
+                    <h1 class="display-3 fw-bold mb-4 lh-1">
+                        Empowering the Next Generation of 
+                        <span class="text-warning">Tech Entrepreneurs</span>
+                    </h1>
+                    <p class="lead mb-4 opacity-90">
+                        Join the first blockchain-based coding club for youth. Learn programming, 
+                        earn cryptocurrency, and launch real-world projects with global mentors.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#signup" class="btn btn-gradient btn-lg px-4 py-3 text-white fw-semibold">
+                            <i class="fas fa-rocket me-2"></i>Join Now - It's Free!
+                        </a>
+                        <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4 py-3">
+                            <i class="fas fa-play me-2"></i>See How It Works
+                        </a>
+                    </div>
+                    <div class="mt-4 d-flex align-items-center gap-4">
+                        <div class="text-center">
+                            <div class="h4 fw-bold mb-0">500+</div>
+                            <small class="opacity-75">Students</small>
+                        </div>
+                        <div class="text-center">
+                            <div class="h4 fw-bold mb-0">50+</div>
+                            <small class="opacity-75">Projects Launched</small>
+                        </div>
+                        <div class="text-center">
+                            <div class="h4 fw-bold mb-0">25+</div>
+                            <small class="opacity-75">Countries</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="floating-animation">
+                        <div class="bg-white bg-opacity-10 rounded-4 p-5 backdrop-blur">
+                            <i class="fas fa-code text-warning" style="font-size: 4rem;"></i>
+                            <div class="mt-3">
+                                <h3 class="h4 fw-bold">Ages 8-18</h3>
+                                <p class="mb-0 opacity-90">No experience required</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark mb-4">About Brain Code Club</h2>
+                    <p class="lead text-muted">
+                        We're revolutionizing youth education by combining coding, entrepreneurship, 
+                        and blockchain technology in an engaging, gamified learning environment.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-graduation-cap text-primary" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4 class="fw-bold">Ages 8-18</h4>
+                        <p class="text-muted">Tailored curriculum for different age groups and skill levels</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-coins text-success" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4 class="fw-bold">EAT Coin Rewards</h4>
+                        <p class="text-muted">Earn cryptocurrency for completing lessons and projects</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-school text-info" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4 class="fw-bold">EATschools Partner</h4>
+                        <p class="text-muted">Official partnership with EATschools for enhanced learning</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-globe text-warning" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4 class="fw-bold">Global Community</h4>
+                        <p class="text-muted">Connect with mentors and peers from around the world</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark mb-4">How It Works</h2>
+                    <p class="lead text-muted">
+                        Get started in just 4 simple steps and begin your journey to becoming a tech entrepreneur
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="fw-bold text-primary" style="font-size: 2rem;">1</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">Sign Up</h4>
+                            <p class="text-muted">Create your free account and choose your learning path based on age and interests</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="fw-bold text-success" style="font-size: 2rem;">2</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">Learn</h4>
+                            <p class="text-muted">Complete interactive coding lessons, watch tutorials, and participate in live sessions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="fw-bold text-warning" style="font-size: 2rem;">3</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">Earn</h4>
+                            <p class="text-muted">Collect EAT Coins for completing challenges, projects, and helping other students</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="fw-bold text-info" style="font-size: 2rem;">4</span>
+                            </div>
+                            <h4 class="fw-bold mb-3">Launch</h4>
+                            <p class="text-muted">Build and deploy real-world projects with mentor guidance and community support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark mb-4">Why Choose Brain Code Club?</h2>
+                    <p class="lead text-muted">
+                        Experience the future of education with our unique blend of technology, gamification, and real-world application
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-3">
+                                    <i class="fas fa-link text-primary" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Blockchain Integration</h4>
+                            </div>
+                            <p class="text-muted">Learn cutting-edge blockchain technology while building practical skills in a secure, educational environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success bg-opacity-10 rounded-3 p-3 me-3">
+                                    <i class="fas fa-coins text-success" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Learn-to-Earn Model</h4>
+                            </div>
+                            <p class="text-muted">Get rewarded with EAT Coins for your progress, creating real incentives for learning and achievement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-info bg-opacity-10 rounded-3 p-3 me-3">
+                                    <i class="fas fa-users text-info" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Global Mentors</h4>
+                            </div>
+                            <p class="text-muted">Connect with experienced developers and entrepreneurs from around the world for personalized guidance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-warning bg-opacity-10 rounded-3 p-3 me-3">
+                                    <i class="fas fa-gamepad text-warning" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Gamified Learning</h4>
+                            </div>
+                            <p class="text-muted">Engage with interactive challenges, leaderboards, and achievements that make learning fun and addictive.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-danger bg-opacity-10 rounded-3 p-3 me-3">
+                                    <i class="fas fa-rocket text-danger" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Real Projects</h4>
+                            </div>
+                            <p class="text-muted">Build actual applications and websites that solve real problems, creating a portfolio for your future.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary bg-opacity-10 rounded-3 p-3 me-3">
+                                    <i class="fas fa-certificate text-secondary" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <h4 class="fw-bold mb-0">Certified Learning</h4>
+                            </div>
+                            <p class="text-muted">Earn blockchain-verified certificates that prove your skills to future employers and universities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-Up Section -->
+    <section id="signup" class="section-padding hero-gradient text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold mb-4">Ready to Start Your Journey?</h2>
+                        <p class="lead opacity-90">
+                            Join thousands of young innovators who are already building the future. 
+                            Sign up now and get your first EAT Coins for free!
+                        </p>
+                    </div>
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-5">
+                            <form id="signupForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label fw-semibold">First Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label fw-semibold">Last Name</label>
+                                        <input type="text" class="form-control form-control-lg" id="lastName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label fw-semibold">Email Address</label>
+                                        <input type="email" class="form-control form-control-lg" id="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label fw-semibold">Age</label>
+                                        <select class="form-select form-select-lg" id="age" required>
+                                            <option value="">Select Age</option>
+                                            <option value="8-10">8-10 years</option>
+                                            <option value="11-13">11-13 years</option>
+                                            <option value="14-16">14-16 years</option>
+                                            <option value="17-18">17-18 years</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="experience" class="form-label fw-semibold">Programming Experience</label>
+                                        <select class="form-select form-select-lg" id="experience" required>
+                                            <option value="">Select Experience Level</option>
+                                            <option value="none">Complete Beginner</option>
+                                            <option value="basic">Some Experience</option>
+                                            <option value="intermediate">Intermediate</option>
+                                            <option value="advanced">Advanced</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="interests" class="form-label fw-semibold">What interests you most?</label>
+                                        <div class="row g-2">
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="webdev">
+                                                    <label class="form-check-label" for="webdev">Web Development</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="blockchain">
+                                                    <label class="form-check-label" for="blockchain">Blockchain</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gamedev">
+                                                    <label class="form-check-label" for="gamedev">Game Development</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="ai">
+                                                    <label class="form-check-label" for="ai">AI & Machine Learning</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="mobile">
+                                                    <label class="form-check-label" for="mobile">Mobile Apps</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="entrepreneurship">
+                                                    <label class="form-check-label" for="entrepreneurship">Entrepreneurship</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="terms" required>
+                                            <label class="form-check-label" for="terms">
+                                                I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="newsletter">
+                                            <label class="form-check-label" for="newsletter">
+                                                Subscribe to our newsletter for updates and exclusive content
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-gradient btn-lg px-5 py-3 text-white fw-semibold">
+                                            <i class="fas fa-rocket me-2"></i>Join Brain Code Club - Free!
+                                        </button>
+                                        <p class="mt-3 mb-0 text-muted small">
+                                            <i class="fas fa-shield-alt me-1"></i>
+                                            100% secure and spam-free. Unsubscribe anytime.
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-brain text-primary me-2"></i>Brain Code Club
+                    </h5>
+                    <p class="text-light opacity-75">
+                        Empowering the next generation of tech entrepreneurs through blockchain-based learning and real-world project development.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light opacity-75 hover:opacity-100">
+                            <i class="fab fa-twitter fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-light opacity-75 hover:opacity-100">
+                            <i class="fab fa-discord fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-light opacity-75 hover:opacity-100">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                        <a href="#" class="text-light opacity-75 hover:opacity-100">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Learn</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Courses</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Projects</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Mentors</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Careers</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Privacy</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Terms</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Security</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light opacity-75">
+                        © 2024 Brain Code Club. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-light opacity-75">
+                        Powered by <span class="text-warning fw-semibold">EATschools</span> & <span class="text-warning fw-semibold">EAT Coin</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+            const experience = document.getElementById('experience').value;
+            
+            // Get selected interests
+            const interests = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                if (checkbox.id !== 'terms' && checkbox.id !== 'newsletter') {
+                    interests.push(checkbox.nextElementSibling.textContent);
+                }
+            });
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Your Account...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                // Show success message
+                const successAlert = document.createElement('div');
+                successAlert.className = 'alert alert-success alert-dismissible fade show mt-3';
+                successAlert.innerHTML = `
+                    <i class="fas fa-check-circle me-2"></i>
+                    <strong>Welcome to Brain Code Club, ${firstName}!</strong> 
+                    Check your email for next steps and your first EAT Coins!
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                `;
+                
+                this.appendChild(successAlert);
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Log signup data (in real app, this would be sent to server)
+                console.log('New signup:', {
+                    name: `${firstName} ${lastName}`,
+                    email: email,
+                    age: age,
+                    experience: experience,
+                    interests: interests,
+                    timestamp: new Date().toISOString()
+                });
+                
+            }, 2000);
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow');
+            } else {
+                navbar.classList.remove('shadow');
+            }
+        });
+
+        // Add animation on scroll for cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add counter animation for stats
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + '+';
+            }, 20);
+        }
+
+        // Trigger counter animation when hero section is visible
+        const heroObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.h4');
+                    animateCounter(counters[0], 500);
+                    animateCounter(counters[1], 50);
+                    animateCounter(counters[2], 25);
+                    heroObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const heroSection = document.querySelector('.hero-gradient');
+        if (heroSection) {
+            heroObserver.observe(heroSection);
+        }
+    </script>
+</body>
+</html>
