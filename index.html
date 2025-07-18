@@ -19,11 +19,11 @@
     
     <style>
         :root {
-            --primary-color: #6366f1;
-            --secondary-color: #8b5cf6;
+            --primary-color: #ec4899;
+            --secondary-color: #f59e0b;
             --accent-color: #06b6d4;
             --dark-bg: #0f172a;
-            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-bg: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
         }
         
         * {
@@ -31,7 +31,7 @@
         }
         
         .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
         }
         
         .card-hover {
@@ -44,15 +44,15 @@
         }
         
         .btn-gradient {
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            background: linear-gradient(45deg, #ec4899, #f59e0b);
             border: none;
             transition: all 0.3s ease;
         }
-        
+
         .btn-gradient:hover {
-            background: linear-gradient(45deg, #5855eb, #7c3aed);
+            background: linear-gradient(45deg, #db2777, #d97706);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
         }
         
         .floating-animation {
@@ -66,11 +66,11 @@
         }
         
         .blockchain-bg {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236366f1' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ec4899' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
         
         .coin-icon {
-            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            background: linear-gradient(45deg, #f59e0b, #d97706);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -85,6 +85,11 @@
                 padding: 60px 0;
             }
         }
+
+        .bg-pink-500 { background-color: #ec4899 !important; }
+        .bg-pink-100 { background-color: #fce7f3 !important; }
+        .text-pink-500 { color: #ec4899 !important; }
+        .border-pink-500 { border-color: #ec4899 !important; }
     </style>
 </head>
 <body>
@@ -92,7 +97,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-white" href="#">
-                <i class="fas fa-brain text-primary me-2"></i>Brain Code Club
+                <i class="fas fa-brain me-2" style="color: #f59e0b;"></i>Brain Code Club
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -158,13 +163,13 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <div class="floating-animation">
-                        <div class="bg-white bg-opacity-10 rounded-4 p-5 backdrop-blur">
-                            <i class="fas fa-code text-warning" style="font-size: 4rem;"></i>
-                            <div class="mt-3">
-                                <h3 class="h4 fw-bold">Ages 8-18</h3>
-                                <p class="mb-0 opacity-90">No experience required</p>
-                            </div>
+                    <div class="position-relative">
+                        <img src="/images/hero-brain-code-club.png" alt="Young people learning to code with blockchain technology" class="img-fluid rounded-4 shadow-lg floating-animation" style="max-height: 500px; object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 bg-warning text-dark px-3 py-2 rounded-pill m-3 fw-bold">
+                            <i class="fas fa-brain me-1"></i>Ages 8-18
+                        </div>
+                        <div class="position-absolute bottom-0 end-0 bg-white text-dark px-3 py-2 rounded-pill m-3 fw-bold shadow">
+                            <i class="fas fa-coins text-warning me-1"></i>Earn EAT Coins
                         </div>
                     </div>
                 </div>
@@ -187,8 +192,8 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3">
                     <div class="text-center">
-                        <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                            <i class="fas fa-graduation-cap text-primary" style="font-size: 2rem;"></i>
+                        <div class="bg-pink-500 bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-graduation-cap text-pink-500" style="font-size: 2rem;"></i>
                         </div>
                         <h4 class="fw-bold">Ages 8-18</h4>
                         <p class="text-muted">Tailored curriculum for different age groups and skill levels</p>
@@ -240,8 +245,8 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body text-center p-4">
-                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
-                                <span class="fw-bold text-primary" style="font-size: 2rem;">1</span>
+                            <div class="bg-pink-500 bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <span class="fw-bold text-pink-500" style="font-size: 2rem;">1</span>
                             </div>
                             <h4 class="fw-bold mb-3">Sign Up</h4>
                             <p class="text-muted">Create your free account and choose your learning path based on age and interests</p>
@@ -301,8 +306,8 @@
                     <div class="card border-0 shadow-sm h-100 card-hover">
                         <div class="card-body p-4">
                             <div class="d-flex align-items-center mb-3">
-                                <div class="bg-primary bg-opacity-10 rounded-3 p-3 me-3">
-                                    <i class="fas fa-link text-primary" style="font-size: 1.5rem;"></i>
+                                <div class="bg-pink-500 bg-opacity-10 rounded-3 p-3 me-3">
+                                    <i class="fas fa-link text-pink-500" style="font-size: 1.5rem;"></i>
                                 </div>
                                 <h4 class="fw-bold mb-0">Blockchain Integration</h4>
                             </div>
@@ -508,7 +513,7 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3">
-                        <i class="fas fa-brain text-primary me-2"></i>Brain Code Club
+                        <i class="fas fa-brain me-2" style="color: #f59e0b;"></i>Brain Code Club
                     </h5>
                     <p class="text-light opacity-75">
                         Empowering the next generation of tech entrepreneurs through blockchain-based learning and real-world project development.
